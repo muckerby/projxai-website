@@ -118,10 +118,10 @@ sections:
         type: FeaturedItem
       - title: Performance Analytics
         subtitle: Faster
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+        text: >
+          Get real-time insights into your marketing performance. Track ROI,
+          conversion rates, and customer engagement with detailed analytics and
+          actionable recommendations.
         image:
           url: /images/icon3.svg
           altText: Featured icon three
