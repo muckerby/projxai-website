@@ -65,10 +65,10 @@ sections:
       - type: FeaturedItem
         title: AI Content Generation
         subtitle: Numbers Done
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+        text: >
+          Create high-converting blog posts, social media content, and ad copy
+          automatically. Our AI generates personalised content that resonates
+          with your target audience and drives engagement.
         actions: []
         elementId: null
         colors: bg-neutralAlt-fg-dark
