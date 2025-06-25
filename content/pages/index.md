@@ -63,7 +63,7 @@ sections:
     subtitle: Why Choose ProjxAI for Your Marketing Automation
     items:
       - type: FeaturedItem
-        title: 500k
+        title: AI Content Generation
         subtitle: Numbers Done
         text: >-
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
