@@ -8,10 +8,11 @@ sections:
       color: text-dark
       type: TitleBlock
     subtitle: Navigating AI Marketing Success
-    text: >
-      A Netlify Create website is a git repo that you own. Every code commit is
-      instantly reflected in the visual editor and since every visual edit is a
-      git commit, git workflows and collaboration just work.
+    text: >+
+      ProjxAI empowers small and medium businesses with cutting-edge AI
+      marketing automation. From content generation to campaign management, we
+      handle your marketing so you can focus on growing your business.
+
     actions:
       - label: Get started
         altText: ''
