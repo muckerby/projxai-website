@@ -93,10 +93,10 @@ sections:
               borderRadius: x-large
       - title: Campaign Management
         subtitle: The Job Stuff
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
+        text: >
+          Set up automated marketing campaigns across multiple platforms. From
+          email sequences to social media scheduling, we handle the execution
+          while you focus on strategy.
         image:
           url: /images/icon2.svg
           altText: Featured icon two
