@@ -60,7 +60,7 @@ sections:
         self:
           textAlign: center
       type: TitleBlock
-    subtitle: Subtitle goes here
+    subtitle: Why Choose ProjxAI for Your Marketing Automation
     items:
       - type: FeaturedItem
         title: 500k
