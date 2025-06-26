@@ -126,13 +126,13 @@
     /* Buttons */
     .sb-component-button {
         @apply inline-flex justify-center items-center text-center border transition duration-200 ease-in hover:-translate-y-1;
-        @apply text-lg; /* ADDED: This will make the button text larger */
+        @apply text-lg; /* This will make the button text larger */
     }
 
     /* Links */
     .sb-component-link {
         @apply inline-flex justify-center items-center text-center transition duration-200 ease-linear;
-        @apply text-lg; /* ADDED: This will make the link text larger */
+        @apply text-lg; /* This will make the link text larger */
     }
     .sb-component-link-primary {
         @apply text-primary hover:underline;
@@ -235,95 +235,3 @@
         .sb-divider,
         .sb-footer-bottom {
             @apply border-neutralAlt;
-        }
-        .sb-carousel-prev,
-        .sb-carousel-next {
-            @apply bg-dark text-light;
-        }
-        .sb-carousel-dot {
-            @apply bg-dark/20;
-        }
-        .sb-carousel-dot-active {
-            @apply bg-dark;
-        }
-    }
-    .bg-dark-fg-light,
-    .sb-card.bg-dark-fg-light {
-        @apply text-light bg-dark;
-        .sb-input,
-        .sb-select,
-        .sb-textarea {
-            @apply placeholder-light/50;
-        }
-        .sb-component-button-primary {
-            @apply bg-primary border-primary text-light;
-        }
-        .sb-component-button-secondary {
-            @apply border-light text-light;
-        }
-        .sb-image-strip-wrap {
-            &:before,
-            &:after {
-                @apply from-transparent to-dark;
-            }
-        }
-        .sb-divider,
-        .sb-footer-bottom {
-            @apply border-light/20;
-        }
-        .sb-carousel-prev,
-        .sb-carousel-next {
-            @apply bg-light text-dark;
-        }
-        .sb-carousel-dot {
-            @apply bg-light/20;
-        }
-        .sb-carousel-dot-active {
-            @apply bg-light;
-        }
-    }
-    /* Only for cards */
-    .bg-neutralAlt-fg-dark {
-        @apply text-dark bg-neutralAlt;
-        .sb-component-button-primary {
-            @apply bg-primary border-primary text-light;
-        }
-        .sb-component-button-secondary {
-            @apply border-dark text-dark;
-        }
-    }
-}
-
-@layer utilities {
-    .underline-line-through {
-        text-decoration-line: underline line-through
-    }
-    .sb-animate-slide-left {
-        animation-name: slideLeft;
-        animation-duration: var(--sb-slide-speed, 80s);
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    @keyframes slideLeft {
-        from {
-            transform: translate3d(0,0,0)
-        }
-        to {
-            transform: translate3d(-50%,0,0)
-        }
-    }
-    .sb-animate-slide-right {
-        animation-name: slideRight;
-        animation-duration: var(--sb-slide-speed, 80s);
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    }
-    @keyframes slideRight {
-        from {
-            transform: translate3d(-50%,0,0)
-        }
-        to {
-            transform: translate3d(0,0,0)
-        }
-    }
-}
