@@ -283,9 +283,15 @@ function ListOfLinks(props) {
                         >
                             <Action
                                 {...link}
-                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-xl !text-dark font-medium hover:no-underline', {
-                                    'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
-                                })}
+                                className={classNames(
+                                    'whitespace-nowrap',
+                                    inMobileMenu ? 'w-full' : 'text-xl font-medium hover:no-underline', // Base styles for desktop
+                                    {
+                                        '!text-dark': link.__metadata.modelName === 'Link', // Apply dark text only for Links
+                                        'text-white': link.__metadata.modelName === 'Button', // Apply white text only for Buttons
+                                        'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
+                                    }
+                                )}
                                 {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
                             />
                         </li>
