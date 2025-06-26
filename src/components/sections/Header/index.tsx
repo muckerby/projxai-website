@@ -279,7 +279,7 @@ function ListOfLinks(props) {
                         >
                             <Action
                                 {...link}
-                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-lg', {
+                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-lg text-dark font-medium', { // CHANGED: text-dark and font-medium
                                     'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
@@ -354,9 +354,9 @@ function LinkWithSubnav(props) {
             {(link.links ?? []).length > 0 && (
                 <ul
                     className={classNames(
-                        'sb-subnav-dropdown', // ADDED THIS CLASS
+                        'sb-subnav-dropdown',
                         colors,
-                        inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full left-0 w-44 border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4',
+                        inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full left-1/2 -translate-x-1/2 w-44 border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4', // CHANGED: left-0 to left-1/2 -translate-x-1/2
                         isSubNavOpen ? 'block' : 'hidden'
                     )}
                     {...(fieldPath && { 'data-sb-field-path': '.links' })}
@@ -375,7 +375,7 @@ function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false })
                 <li key={index}>
                     <Action
                         {...link}
-                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-lg')}
+                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-lg text-light hover:text-light hover:no-underline')} // CHANGED: added text-light hover:text-light hover:no-underline
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />
                 </li>
