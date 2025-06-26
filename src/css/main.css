@@ -127,13 +127,13 @@
     /* Buttons */
     .sb-component-button {
         @apply inline-flex justify-center items-center text-center border transition duration-200 ease-in hover:-translate-y-1;
-        @apply text-lg; /* This will make the button text larger */
+        @apply text-xl; /* This will make the button text larger */
     }
 
     /* Links */
     .sb-component-link {
         @apply inline-flex justify-center items-center text-center transition duration-200 ease-linear;
-        @apply text-lg; /* This will make the link text larger */
+        @apply text-xl; /* This will make the link text larger */
     }
     .sb-component-link-primary {
         @apply text-primary hover:underline;
