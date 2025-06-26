@@ -337,13 +337,4 @@
         animation-name: slideRight;
         animation-duration: var(--sb-slide-speed, 80s);
         animation-timing-function: linear;
-        animation-iteration-count: infinite;
-    } /* End .sb-animate-slide-right */
-    @keyframes slideRight { /* Start @keyframes slideRight */
-        from {
-            transform: translate3d(-50%,0,0)
-        }
-        to {
-            transform: translate3d(0,0,0)
-        }
-    } /* End @keyframes slide
+        animation
