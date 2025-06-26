@@ -12,6 +12,11 @@ import MenuIcon from '../../svgs/menu';
 
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
+
+    // Refactored: Assign conditional classes to variables for clarity and to avoid parsing issues
+    const headerMarginClasses = styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined;
+    const headerPaddingClasses = styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'p-4';
+
     return (
         <header
             className={classNames(
@@ -20,8 +25,8 @@ export default function Header(props) {
                 colors,
                 'relative',
                 'shadow-header',
-                styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined,
-                styles?.self?.padding ? mapStyles({ padding: styles:?.self?.padding }) : 'p-4',
+                headerMarginClasses, // Use the variable here
+                headerPaddingClasses, // Use the variable here
                 'z-50'
             )}
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
@@ -356,7 +361,7 @@ function LinkWithSubnav(props) {
                     className={classNames(
                         'sb-subnav-dropdown',
                         colors,
-                        inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full right-0 w-max border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4', // MODIFIED: left-1/2 -translate-x-1/2 to right-0, and w-44 to w-max
+                        inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full right-0 w-max border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4',
                         isSubNavOpen ? 'block' : 'hidden'
                     )}
                     {...(fieldPath && { 'data-sb-field-path': '.links' })}
