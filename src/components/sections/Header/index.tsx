@@ -13,7 +13,6 @@ import MenuIcon from '../../svgs/menu';
 export default function Header(props) {
     const { colors = 'bg-light-fg-dark', styles = {}, enableAnnotations } = props;
 
-    // Refactored: Assign conditional classes to variables for clarity and to avoid parsing issues
     const headerMarginClasses = styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined;
     const headerPaddingClasses = styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'p-4';
 
@@ -25,8 +24,8 @@ export default function Header(props) {
                 colors,
                 'relative',
                 'shadow-header',
-                headerMarginClasses, // Use the variable here
-                headerPaddingClasses, // Use the variable here
+                headerMarginClasses,
+                headerPaddingClasses,
                 'z-50'
             )}
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
@@ -360,8 +359,8 @@ function LinkWithSubnav(props) {
                 <ul
                     className={classNames(
                         'sb-subnav-dropdown',
-                        colors,
-                        inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full right-0 w-max border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4',
+                        // Removed 'colors' prop here to ensure custom background color from main.css applies
+                        inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full left-0 w-max border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4', // Changed right-0 to left-0
                         isSubNavOpen ? 'block' : 'hidden'
                     )}
                     {...(fieldPath && { 'data-sb-field-path': '.links' })}
@@ -380,7 +379,7 @@ function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false })
                 <li key={index}>
                     <Action
                         {...link}
-                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-xl text-light hover:text-light hover:no-underline')}
+                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-xl text-white hover:text-white hover:no-underline')} // Changed text-light to text-white
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />
                 </li>
