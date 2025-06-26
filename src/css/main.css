@@ -235,3 +235,112 @@
         .sb-divider,
         .sb-footer-bottom {
             @apply border-neutralAlt;
+        }
+        .sb-carousel-prev,
+        .sb-carousel-next {
+            @apply bg-dark text-light;
+        }
+        .sb-carousel-dot {
+            @apply bg-dark/20;
+        }
+        .sb-carousel-dot-active {
+            @apply bg-dark;
+        }
+    }
+    .bg-dark-fg-light,
+    .sb-card.bg-dark-fg-light {
+        @apply text-light bg-dark;
+        .sb-input,
+        .sb-select,
+        .sb-textarea {
+            @apply placeholder-light/50;
+        }
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-light text-light;
+        }
+        .sb-image-strip-wrap {
+            &:before,
+            &:after {
+                @apply from-transparent to-dark;
+            }
+        }
+        .sb-divider,
+        .sb-footer-bottom {
+            @apply border-light/20;
+        }
+        .sb-carousel-prev,
+        .sb-carousel-next {
+            @apply bg-light text-dark;
+        }
+        .sb-carousel-dot {
+            @apply bg-light/20;
+        }
+        .sb-carousel-dot-active {
+            @apply bg-light;
+        }
+    }
+    /* Only for cards */
+    .bg-neutralAlt-fg-dark {
+        @apply text-dark bg-neutralAlt;
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-dark;
+        }
+    }
+
+    /* Custom styling for the sub-navigation dropdown */
+    .sb-subnav-dropdown {
+        @apply bg-dark text-light rounded-lg shadow-lg; /* Dark background, light text, rounded corners, shadow */
+        padding: 1rem; /* Add some padding */
+        min-width: 180px; /* Ensure a minimum width */
+        border: none; /* Remove any default borders */
+    }
+    .sb-subnav-dropdown li {
+        @apply py-2 px-3; /* Padding for each item */
+    }
+    .sb-subnav-dropdown li:hover {
+        @apply bg-primary rounded; /* Highlight on hover */
+    }
+    .sb-subnav-dropdown li a {
+        @apply text-light hover:text-light no-underline; /* Ensure links are light and don't underline on hover */
+    }
+}
+
+@layer utilities {
+    .underline-line-through {
+        text-decoration-line: underline line-through
+    }
+    .sb-animate-slide-left {
+        animation-name: slideLeft;
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes slideLeft {
+        from {
+            transform: translate3d(0,0,0)
+        }
+        to {
+            transform: translate3d(-50%,0,0)
+        }
+    }
+    .sb-animate-slide-right {
+        animation-name: slideRight;
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    @keyframes slideRight {
+        from {
+            transform: translate3d(-50%,0,0)
+        }
+        to {
+            transform: translate3d(0,0,0)
+        }
+    }
+}
