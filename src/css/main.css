@@ -313,6 +313,32 @@
     .underline-line-through {
         text-decoration-line: underline line-through
     }
-    .sb-animate-slide-left {
+    .sb-animate-slide-left { /* Start .sb-animate-slide-left */
         animation-name: slideLeft;
-        animation-duration: var(--sb-slide-speed, 80
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    } /* End .sb-animate-slide-left */
+    @keyframes slideLeft { /* Start @keyframes slideLeft */
+        from {
+            transform: translate3d(0,0,0)
+        }
+        to {
+            transform: translate3d(-50%,0,0)
+        }
+    } /* End @keyframes slideLeft */
+    .sb-animate-slide-right { /* Start .sb-animate-slide-right */
+        animation-name: slideRight;
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    } /* End .sb-animate-slide-right */
+    @keyframes slideRight { /* Start @keyframes slideRight */
+        from {
+            transform: translate3d(-50%,0,0)
+        }
+        to {
+            transform: translate3d(0,0,0)
+        }
+    } /* End @keyframes slideRight */
+} /* End @layer utilities */
