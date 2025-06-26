@@ -21,8 +21,8 @@
             "type": "Link"
         },
         {
-            "label": "Blog",
-            "altText": "Blog",
+            "label": "Services",
+            "altText": "Services",
             "url": "/blog",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -30,8 +30,8 @@
             "type": "Link"
         },
         {
-            "label": "Careers",
-            "altText": "Careers page",
+            "label": "About",
+            "altText": "About ProjxAI page",
             "url": "/careers",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -73,8 +73,8 @@
     ],
     "secondaryLinks": [
         {
-            "label": "Sign up",
-            "altText": "Sign up",
+            "label": "Start Free Trial",
+            "altText": "Start Free Trial",
             "url": "https://app.netlify.com/signup",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -82,7 +82,7 @@
             "type": "Button"
         },
         {
-            "label": "Log in",
+            "label": "Client Portal",
             "url": "/",
             "icon": "arrowRight",
             "iconPosition": "right",
