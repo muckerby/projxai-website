@@ -212,7 +212,7 @@
     } /* End .bg-light-fg-dark */
     .bg-neutral-fg-dark,
     .sb-card.bg-neutral-fg-dark { /* Start .bg-neutral-fg-dark */
-        @apply text-white bg-blue-500; /* Changed from text-dark bg-neutral to match dropdown styling */
+        @apply text-white bg-blue-400; /* Changed to bg-blue-400 for brighter blue to match dropdown */
         .sb-input,
         .sb-select,
         .sb-textarea {
@@ -227,7 +227,7 @@
         .sb-image-strip-wrap {
             &:before,
             &:after {
-                @apply from-transparent to-blue-500; /* Changed from to-neutral to match new blue background */
+                @apply from-transparent to-blue-400; /* Changed to match new blue-400 background */
             }
         }
         .sb-divider,
@@ -293,7 +293,7 @@
 
     /* Custom styling for the sub-navigation dropdown */
     .sb-subnav-dropdown { /* Start .sb-subnav-dropdown */
-        @apply bg-blue-500 text-white rounded-lg shadow-lg; /* Changed bg-dark to bg-blue-500, text-light to text-white */
+        @apply bg-blue-400 text-white rounded-lg shadow-lg; /* Changed to bg-blue-400 for brighter, more vibrant blue */
         padding: 1rem;
         min-width: 180px;
         border: none;
