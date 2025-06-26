@@ -1,96 +1,72 @@
 {
-    "logo": {
-        "url": "/images/projxai_logo_final_white_SM2.png",
-        "altText": "ProjxAI Logo",
-        "styles": {
-            "self": {
-                "margin": [
-                    "mr-3"
-                ]
-            }
-        },
-        "type": "ImageBlock"
+  "logo": {
+    "url": "/images/projxai_logo_final_white_SM2.png",
+    "altText": "Logo dark"
+  },
+  "primaryLinks": [
+    {
+      "type": "Link",
+      "label": "Pricing",
+      "url": "/pricing"
     },
-    "primaryLinks": [
+    {
+      "type": "Link",
+      "label": "Solutions",
+      "url": "/blog"
+    },
+    {
+      "type": "Link",
+      "label": "About",
+      "url": "/careers"
+    },
+    {
+      "type": "SubNav",
+      "label": "Services",
+      "url": "#",
+      "links": [
         {
-            "label": "Pricing",
-            "url": "/pricing",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
+          "type": "Link",
+          "label": "AI Content Generation",
+          "url": "/services/ai-content"
         },
         {
-            "label": "Services",
-            "altText": "Services",
-            "url": "/blog",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
+          "type": "Link",
+          "label": "Campaign Management",
+          "url": "/services/campaign-management"
         },
         {
-            "label": "About",
-            "altText": "About ProjxAI page",
-            "url": "/careers",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
+          "type": "Link",
+          "label": "Social Media Automation",
+          "url": "/services/social-media"
         },
         {
-            "label": "Dropdown",
-            "altText": "Dropdown",
-            "links": [
-                {
-                    "label": "Dropdown item",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "Dropdown item",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "Dropdown item",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                }
-            ],
-            "labelStyle": "secondary",
-            "type": "SubNav"
+          "type": "Link",
+          "label": "Performance Analytics",
+          "url": "/services/performance-analytics"
+        },
+        {
+          "type": "Link",
+          "label": "Lead Generation",
+          "url": "/services/lead-generation"
         }
-    ],
-    "secondaryLinks": [
-        {
-            "label": "Start Free Trial",
-            "altText": "Start Free Trial",
-            "url": "https://app.netlify.com/signup",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Button"
-        },
-        {
-            "label": "Client Portal",
-            "url": "/",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "primary",
-            "type": "Button"
-        }
-    ],
-    "variant": "logo-left-primary-nav-right",
-    "colors": "bg-light-fg-dark",
-    "type": "Header"
+      ]
+    }
+  ],
+  "secondaryLinks": [
+    {
+      "type": "Button",
+      "label": "Start Free Trial",
+      "url": "/signup",
+      "style": "primary"
+    },
+    {
+      "type": "Button",
+      "label": "Client Portal",
+      "url": "/login",
+      "style": "secondary"
+    }
+  ],
+  "variant": "logo-left-primary-nav-right",
+  "colors": "bg-light-fg-dark",
+  "type": "Header"
 }
