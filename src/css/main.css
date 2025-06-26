@@ -168,4 +168,182 @@
         overflow-y: hidden;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
-        -webkit-
+        -webkit-box-orient: vertical;
+    } /* End .sb-carousel-tab-title */
+    .sb-carousel-tab-title-active { /* Start .sb-carousel-tab-title-active */
+        @apply opacity-100;
+    } /* End .sb-carousel-tab-title-active */
+
+    /* Color palettes */
+    .bg-light-fg-dark,
+    .sb-card.bg-light-fg-dark { /* Start .bg-light-fg-dark */
+        @apply text-dark bg-light;
+        .sb-input,
+        .sb-select,
+        .sb-textarea {
+            @apply placeholder-dark/50;
+        }
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-dark;
+        }
+        .sb-image-strip-wrap {
+            &:before,
+            &:after {
+                @apply from-transparent to-light;
+            }
+        }
+        .sb-divider,
+        .sb-footer-bottom {
+            @apply border-neutral;
+        }
+        .sb-carousel-prev,
+        .sb-carousel-next {
+            @apply bg-dark text-light;
+        }
+        .sb-carousel-dot {
+            @apply bg-dark/20;
+        }
+        .sb-carousel-dot-active {
+            @apply bg-dark;
+        }
+    } /* End .bg-light-fg-dark */
+    .bg-neutral-fg-dark,
+    .sb-card.bg-neutral-fg-dark { /* Start .bg-neutral-fg-dark */
+        @apply text-dark bg-neutral;
+        .sb-input,
+        .sb-select,
+        .sb-textarea {
+            @apply placeholder-dark/50;
+        }
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-dark;
+        }
+        .sb-image-strip-wrap {
+            &:before,
+            &:after {
+                @apply from-transparent to-neutral;
+            }
+        }
+        .sb-divider,
+        .sb-footer-bottom {
+            @apply border-neutralAlt;
+        }
+        .sb-carousel-prev,
+        .sb-carousel-next {
+            @apply bg-dark text-light;
+        }
+        .sb-carousel-dot {
+            @apply bg-dark/20;
+        }
+        .sb-carousel-dot-active {
+            @apply bg-dark;
+        }
+    } /* End .bg-neutral-fg-dark */
+    .bg-dark-fg-light,
+    .sb-card.bg-dark-fg-light { /* Start .bg-dark-fg-light */
+        @apply text-light bg-dark;
+        .sb-input,
+        .sb-select,
+        .sb-textarea {
+            @apply placeholder-light/50;
+        }
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-light text-light;
+        }
+        .sb-image-strip-wrap {
+            &:before,
+            &:after {
+                @apply from-transparent to-dark;
+            }
+        }
+        .sb-divider,
+        .sb-footer-bottom {
+            @apply border-light/20;
+        }
+        .sb-carousel-prev,
+        .sb-carousel-next {
+            @apply bg-light text-dark;
+        }
+        .sb-carousel-dot {
+            @apply bg-light/20;
+        }
+        .sb-carousel-dot-active {
+            @apply bg-light;
+        }
+    } /* End .bg-dark-fg-light */
+    /* Only for cards */
+    .bg-neutralAlt-fg-dark { /* Start .bg-neutralAlt-fg-dark */
+        @apply text-dark bg-neutralAlt;
+        .sb-component-button-primary {
+            @apply bg-primary border-primary text-light;
+        }
+        .sb-component-button-secondary {
+            @apply border-dark text-dark;
+        }
+    } /* End .bg-neutralAlt-fg-dark */
+
+    /* Custom styling for the sub-navigation dropdown */
+    .sb-subnav-dropdown { /* Start .sb-subnav-dropdown */
+        @apply bg-blue-500 text-white rounded-lg shadow-lg; /* Changed bg-dark to bg-blue-500, text-light to text-white */
+        padding: 1rem;
+        min-width: 180px;
+        border: none;
+    } /* End .sb-subnav-dropdown */
+    .sb-subnav-dropdown li { /* Start .sb-subnav-dropdown li */
+        @apply py-2 px-3;
+    } /* End .sb-subnav-dropdown li */
+    .sb-subnav-dropdown li:hover { /* Start .sb-subnav-dropdown li:hover */
+        @apply bg-primary rounded;
+    } /* End .sb-subnav-dropdown li:hover */
+    .sb-subnav-dropdown li a { /* Start .sb-subnav-dropdown li a */
+        @apply text-white hover:text-white no-underline; /* Changed text-light to text-white */
+    } /* End .sb-subnav-dropdown li a */
+
+    /* Custom styling for the primary button */
+    .sb-component-button-primary { /* Start .sb-component-button-primary */
+        @apply bg-blue-500 border-blue-500 text-white; /* Changed bg-primary to bg-blue-500, border-primary to border-blue-500, text-light to text-white */
+    } /* End .sb-component-button-primary */
+
+} /* End @layer components */
+
+@layer utilities { /* Start @layer utilities */
+    .underline-line-through {
+        text-decoration-line: underline line-through
+    }
+    .sb-animate-slide-left { /* Start .sb-animate-slide-left */
+        animation-name: slideLeft;
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    } /* End .sb-animate-slide-left */
+    @keyframes slideLeft { /* Start @keyframes slideLeft */
+        from {
+            transform: translate3d(0,0,0)
+        }
+        to {
+            transform: translate3d(-50%,0,0)
+        }
+    } /* End @keyframes slideLeft */
+    .sb-animate-slide-right { /* Start .sb-animate-slide-right */
+        animation-name: slideRight;
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    } /* End .sb-animate-slide-right */
+    @keyframes slideRight { /* Start @keyframes slideRight */
+        from {
+            transform: translate3d(-50%,0,0)
+        }
+        to {
+            transform: translate3d(0,0,0)
+        }
+    } /* End @keyframes slide
