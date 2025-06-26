@@ -329,4 +329,12 @@
         from {
             transform: translate3d(0,0,0)
         }
-        to
+        to {
+            transform: translate3d(-50%,0,0)
+        }
+    } /* End @keyframes slideLeft */
+    .sb-animate-slide-right { /* Start .sb-animate-slide-right */
+        animation-name: slideRight;
+        animation-duration: var(--sb-slide-speed, 80s);
+        animation-timing-function: linear;
+        animation-iteration-count
