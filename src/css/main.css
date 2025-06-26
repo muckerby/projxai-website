@@ -288,6 +288,12 @@
         }
         .sb-component-button-secondary {
             @apply border-dark text-dark;
+    }
+    /* Add this at the end of the @layer components block */
+    .sb-component-link,
+    .sb-component-button {
+    font-size: 1.2rem; /* Increase by 20% from 1rem base size */
+    }
         }
     }
 }
