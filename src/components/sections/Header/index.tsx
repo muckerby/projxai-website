@@ -279,7 +279,7 @@ function ListOfLinks(props) {
                         >
                             <Action
                                 {...link}
-                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-lg', { // CHANGED text-sm to text-lg
+                                className={classNames('whitespace-nowrap', inMobileMenu ? 'w-full' : 'text-lg', {
                                     'justify-start py-3': inMobileMenu && link.__metadata.modelName === 'Link'
                                 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })}
@@ -339,7 +339,7 @@ function LinkWithSubnav(props) {
                     link.labelStyle === 'secondary' ? 'sb-component-link-secondary' : 'sb-component-link-primary',
                     'inline-flex',
                     'items-center',
-                    inMobileMenu ? 'w-full' : 'text-lg', // CHANGED text-sm to text-lg
+                    inMobileMenu ? 'w-full' : 'text-lg',
                     {
                         'group-hover:no-underline hover:no-underline': !inMobileMenu && (link.labelStyle ?? 'primary') === 'primary',
                         'group-hover:text-primary': !inMobileMenu && link.labelStyle === 'secondary'
@@ -354,6 +354,7 @@ function LinkWithSubnav(props) {
             {(link.links ?? []).length > 0 && (
                 <ul
                     className={classNames(
+                        'sb-subnav-dropdown', // ADDED THIS CLASS
                         colors,
                         inMobileMenu ? 'p-4 space-y-3' : 'absolute top-full left-0 w-44 border-t border-primary shadow-header z-10 px-6 pt-5 pb-6 space-y-4',
                         isSubNavOpen ? 'block' : 'hidden'
@@ -374,7 +375,7 @@ function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false })
                 <li key={index}>
                     <Action
                         {...link}
-                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-lg')} // CHANGED text-sm to text-lg
+                        className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-lg')}
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />
                 </li>
