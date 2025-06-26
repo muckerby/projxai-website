@@ -212,22 +212,22 @@
     } /* End .bg-light-fg-dark */
     .bg-neutral-fg-dark,
     .sb-card.bg-neutral-fg-dark { /* Start .bg-neutral-fg-dark */
-        @apply text-dark bg-neutral;
+        @apply text-white bg-blue-500; /* Changed from text-dark bg-neutral to match dropdown styling */
         .sb-input,
         .sb-select,
         .sb-textarea {
-            @apply placeholder-dark/50;
+            @apply placeholder-white/50; /* Changed from placeholder-dark/50 to work with blue background */
         }
         .sb-component-button-primary {
             @apply bg-primary border-primary text-light;
         }
         .sb-component-button-secondary {
-            @apply border-dark text-dark;
+            @apply border-white text-white; /* Changed from border-dark text-dark to work with blue background */
         }
         .sb-image-strip-wrap {
             &:before,
             &:after {
-                @apply from-transparent to-neutral;
+                @apply from-transparent to-blue-500; /* Changed from to-neutral to match new blue background */
             }
         }
         .sb-divider,
